@@ -1,0 +1,1002 @@
+body {
+  background-color: #fff;
+  color: #151515;
+}
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px dotted #939393;
+}
+
+
+
+
+
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#cssmenu {
+  /* width: 200px; */
+  /* font-family: Helvetica, Arial, sans-serif; */
+  color: #ffffff;
+}
+#cssmenu ul ul {
+  display: none;
+}
+.align-right {
+  float: right;
+}
+#cssmenu > ul > li > a {
+  padding: 15px 20px;
+  /* border-left: 1px solid #1682ba; */
+  /* border-right: 1px solid #1682ba; */
+  border-top: 1px solid #1682ba;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+  /* text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+  background: #36aae7;
+  background: -webkit-linear-gradient(#36aae7, #1fa0e4);
+  background: -moz-linear-gradient(#36aae7, #1fa0e4);
+  background: -o-linear-gradient(#36aae7, #1fa0e4);
+  background: -ms-linear-gradient(#36aae7, #1fa0e4);
+  background: linear-gradient(#36aae7, #1fa0e4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15); */
+}
+#cssmenu > ul > li > a:hover,
+#cssmenu > ul > li.active > a,
+#cssmenu > ul > li.open > a {
+  color: #eeeeee;
+  background: #1fa0e4;
+  background: -webkit-linear-gradient(#1fa0e4, #1992d1);
+  background: -moz-linear-gradient(#1fa0e4, #1992d1);
+  background: -o-linear-gradient(#1fa0e4, #1992d1);
+  background: -ms-linear-gradient(#1fa0e4, #1992d1);
+  background: linear-gradient(#1fa0e4, #1992d1);
+}
+#cssmenu > ul > li.open > a {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid #1682ba;
+}
+#cssmenu > ul > li:last-child > a,
+#cssmenu > ul > li.last > a {
+  border-bottom: 1px solid #1682ba;
+}
+.holder {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.holder::after,
+.holder::before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  right: 20px;
+  z-index: 10;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.holder::after {
+  top: 17px;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+}
+#cssmenu > ul > li > a:hover > span::after,
+#cssmenu > ul > li.active > a > span::after,
+#cssmenu > ul > li.open > a > span::after {
+  border-color: #eeeeee;
+}
+.holder::before {
+  top: 18px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+  border-top-color: inherit;
+  border-left-color: inherit;
+}
+#cssmenu ul ul li a {
+  cursor: pointer;
+  border-bottom: 1px solid #32373e;
+  border-left: 1px solid #32373e;
+  border-right: 1px solid #32373e;
+  padding: 10px 20px;
+  z-index: 1;
+  text-decoration: none;
+  font-size: 13px;
+  color: #eeeeee;
+  background: #49505a;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+#cssmenu ul ul li:hover > a,
+#cssmenu ul ul li.open > a,
+#cssmenu ul ul li.active > a {
+  background: #424852;
+  color: #ffffff;
+}
+#cssmenu ul ul li:first-child > a {
+  box-shadow: none;
+}
+#cssmenu ul ul ul li:first-child > a {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+#cssmenu ul ul ul li a {
+  padding-left: 30px;
+}
+#cssmenu > ul > li > ul > li:last-child > a,
+#cssmenu > ul > li > ul > li.last > a {
+  border-bottom: 0;
+}
+#cssmenu > ul > li > ul > li.open:last-child > a,
+#cssmenu > ul > li > ul > li.last.open > a {
+  border-bottom: 1px solid #32373e;
+}
+#cssmenu > ul > li > ul > li.open:last-child > ul > li:last-child > a {
+  border-bottom: 0;
+}
+#cssmenu ul ul li.has-sub > a::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  right: 20px;
+  z-index: 10;
+  top: 11.5px;
+  border-top: 2px solid #eeeeee;
+  border-left: 2px solid #eeeeee;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+#cssmenu ul ul li.active > a::after,
+#cssmenu ul ul li.open > a::after,
+#cssmenu ul ul li > a:hover::after {
+  border-color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Header and Navbar
+------------------------- */
+
+.nephele-topbar .btn {
+	font-size: 12px;
+	color: #939393;
+}
+
+.nephele-topbar .btn-link:hover,
+.nephele-topbar .btn-link:focus {
+	color: #fff;
+	text-decoration: none;
+	background-color: transparent;
+	outline: 0;
+}
+
+.navbar {
+  position: relative;
+  min-height: 110px;
+  margin-bottom: 0px;
+  border: none;
+  /* border-bottom: 1px dotted #555; */
+  border-radius: 0px;
+  background-color: #151515;
+}
+
+
+
+.cdb-top {
+  margin-top: 20px;
+}
+
+.cdb-localnav {
+  background-color: transparent;
+}
+
+.cdb-bodyhr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px dotted #939393;
+}
+
+.nephele-navhr {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: 0;
+    border-top: 1px dotted #939393;
+}
+
+.nephele-logotype {
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #ff0000;
+}
+
+.nephele-tagline {
+	font-size: 12px;
+	color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #939393;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+	color: #fff;	
+}
+
+.nephele-navlinks {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 0px;
+}
+
+.navbar-default .navbar-toggle {
+	border: 3px solid #fff;
+	border-radius: 0px;
+	margin-top: 20px;
+	margin-bottom: 27px;
+}
+
+.navbar-default .navbar-toggle:hover {
+	background-color: transparent;
+	border: 3px solid #fff;
+}
+
+.navbar-default .navbar-toggle:focus {
+	background-color: transparent;
+	border: 3px solid #fff;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #555;
+}
+
+/* Jumbotron contents
+------------------------- */
+
+.nephele-hero {
+  position: relative;
+  background: url("hero6.jpg") center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.jumbotron {
+    background-color: #151515;
+    margin-bottom: 0px;
+}
+
+.jumbotron .nephele-intro {
+	color: #fff;
+  	font-size: 72px;
+  	text-transform: uppercase;
+  	margin-bottom: -30px;
+}
+
+.jumbotron .nephele-intro-tagline {
+	color: #fff;
+}
+
+.jumbotron .nephele-cta-try {
+	color: #ff0000;
+  	/* text-transform: uppercase; */
+  	margin-bottom: 0px;
+}
+
+.jumbotron .nephele-cta-instructions {
+	font-size: 14px;
+	color: #fff;
+}
+
+.nephele-getstarted {
+	padding-left: 0px;
+}
+
+.try-nephele-email {
+	border: none;
+	border-radius: 0px;
+	color: #ff0000;	
+}
+
+.try-nephele-emailbutton {
+	border: none;
+	border-radius: 0px;
+	background-color: #ff0000;
+	color: #fff;
+	padding-top: 11px;
+    padding-bottom: 11px;	
+}
+
+.try-nephele-emailbutton:hover,
+.try-nephele-emailbutton:focus {
+	padding-top: 11px;
+	padding-bottom: 11px;
+	border: none;
+	border-radius: 0px;
+	background-color: #ff0000;
+	color: #fff;	
+}
+
+.jumbotron .nephele-getstarted-instructions {
+	font-size: 14px;
+	color: #fff;
+}
+
+.instructions-link {
+	color: #939393;
+	text-decoration: none;
+}
+
+.instructions-link:hover,
+.instructions-link:focus {
+	color: #ff0000;
+	text-decoration: none;
+}
+
+/* Homepage column sections
+------------------------- */
+
+.nephele-sections-columns {
+	background-color: #151515;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.nephele-home-sections {
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.nephele-home-sections:hover {
+}
+
+.home-sections-heading {
+	color: #ff0000;
+}
+
+.home-sections-copy {
+	color: #fff;
+}
+
+.home-sections-link {
+	color: #939393;
+	text-decoration: none;
+}
+
+.home-sections-link:hover,
+.home-sections-link:focus {
+	color: #ff0000;
+	text-decoration: none;
+}
+
+.sections-columns-separator {
+	border-top: 1px dotted #555;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+/* Featurettes
+------------------------- */
+
+.features {
+  background-color: #f6f6f6;
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+  border-top: 1px dotted #939393;
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.featurette-image:hover {
+}
+
+/* Newsletter
+------------------------- */
+
+.newsletter-area {
+  background-color: #151515;
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+.nephele-cta-newsletter {
+	color: #ff0000;
+  	/* text-transform: uppercase; */
+  	margin-bottom: 0px;
+}
+
+.nephele-cta-newscopy {
+	color: #fff;
+}
+
+.nephele-newsbox {
+	padding-left: 0px;
+	text-align: center;
+}
+
+.subscribe-to-newsletter {
+	border: none;
+	border-radius: 0px;
+	color: #ff0000;	
+}
+
+.subscribe-to-newsletterbutton {
+	border: none;
+	border-radius: 0px;
+	background-color: #ff0000;
+	color: #fff;
+	padding-top: 11px;
+    padding-bottom: 11px;	
+}
+
+.subscribe-to-newsletterbutton:hover,
+.subscribe-to-newsletterbutton:focus {
+	padding-top: 11px;
+	padding-bottom: 11px;
+	border: none;
+	border-radius: 0px;
+	background-color: #ff0000;
+	color: #fff;	
+}
+
+/* Modal
+------------------------- */
+.modal-content {
+    position: relative;
+    background-color: #151515;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 0px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+}
+
+.modal-header {
+    min-height: 16.43px;
+    padding: 15px;
+    border: 0;
+}
+
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-shadow: none;
+    filter: alpha(opacity=20);
+    opacity: 1;
+}
+
+.close:hover {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-shadow: none;
+    filter: alpha(opacity=20);
+    opacity: 1;
+}
+
+.newsletter-info {
+	text-align: center;
+}
+
+/* main niaid footer
+------------------------- */
+.main-niaid-footer {
+	background-color: #fafafa;
+	margin-top: 0px;
+	padding-bottom: 100px;
+	padding-top: 60px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.footer-links-heading {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+
+.footer-links {
+	font-size: 12px;
+	color: #151515;
+	line-height: 2;
+}
+
+.footer-links:hover,
+.footer-links:focus {
+	color: #ff0000;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+.footer-address {
+	font-size: 12px;
+	color: #151515;
+}
+
+.footer-columns-separator {
+	border-top: 1px solid transparent;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.sidebar-column-separator {
+	border-top: 1px solid #000;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.footer-col-hr {
+  border-top: 1px dotted #939393;
+}
+
+/* Analysis Engine PAGE CSS
+-------------------------------------------------- */
+
+.featured-pipelines {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.sort-pipelines {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.refine-pipelines {
+	text-transform: uppercase;
+	color: #939393;
+}
+
+.refine-category {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #939393;
+}
+
+.refine-category:hover,
+.refine-category:focus {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #939393;
+}
+
+.panel-group {
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.panel-group .panel {
+    margin-bottom: 0;
+    border-radius: 0px;
+}
+
+.panel-default {
+    border-color: #eee;
+}
+
+.panel {
+    margin-bottom: 20px;
+    background-color: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.panel-default>.panel-heading {
+    background-color: #fafafa;
+    border-color: #eee;
+}
+
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.checkbox+.checkbox, .radio+.radio {
+    margin-top: 0px;
+}
+
+.panel-group .panel-heading+.panel-collapse>.list-group, .panel-group .panel-heading+.panel-collapse>.panel-body {
+    border-top: 1px solid #eee;
+}
+
+.get-resultsbutton {
+	border: none;
+	border-radius: 0px;
+	background-color: #3333ff;
+	color: #fff;
+	padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;	
+}
+
+.get-resultsbutton:hover,
+.get-resultsbutton:focus {
+	padding-top: 11px;
+	padding-bottom: 11px;
+	border: none;
+	border-radius: 0px;
+	background-color: #1a1aff;
+	color: #fff;
+	font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;	
+}
+
+.featured-all-pipelines-area {
+	padding-top: 30px;
+	padding-bottom: 60px;
+}
+
+.featured-all-pipelines {
+	text-transform: uppercase;
+	color: #939393;
+}
+
+.sort-menu {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+	color: #939393;
+    background-color: transparent;
+    border: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 0px;
+    border-radius: 0px;
+}
+
+.sort-menu:hover {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+	color: #939393;
+    background-color: transparent;
+    border: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 0px;
+    border-radius: 0px;
+}
+
+.btn-group.open .dropdown-toggle {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
+    background-color: transparent;
+    border: none;
+}
+
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
+    color: #939393;
+    background-color: transparent;
+    border-color: none;
+}
+
+.all-pipelinesbutton {
+	border: none;
+	border-radius: 0px;
+	background-color: #3333ff;
+	color: #fff;
+	padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;	
+}
+
+.all-pipelinesbutton:hover,
+.all-pipelinesbutton:focus {
+	padding-top: 11px;
+	padding-bottom: 11px;
+	border: none;
+	border-radius: 0px;
+	background-color: #1a1aff;
+	color: #fff;
+	font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;	
+}
+
+.analysispage-content {
+	margin-right: 0px;
+	margin-left: 0px;
+	background-color: #f6f6f6;
+}
+
+/* Microbiome PAGE CSS
+-------------------------------------------------- */
+
+.microbiomepage-content {
+	margin-right: 0px;
+	margin-left: 0px;
+	background-color: #f6f6f6;
+}
+
+/* User Guide PAGE CSS
+-------------------------------------------------- */
+
+.userguidepage-content {
+	margin-right: 0px;
+	margin-left: 0px;
+	background-color: #f6f6f6;
+}
+
+
+/* ABOUT PAGE CSS
+-------------------------------------------------- */
+
+.nav-stacked>li+li {
+    margin-top: 0px;
+    margin-left: 0;
+}
+
+.nav-pills>li>a {
+    border-radius: 0px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    display: block;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+
+.nav-pills>li>a:hover {
+    position: relative;
+    display: block;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #fff;
+    background-color: #337ab7;
+    padding-left: 15px;
+}
+
+.aboutpage-content {
+	margin-right: 0px;
+	margin-left: 0px;
+	background-color: #f6f6f6;
+}
+
+.page-content .nephele-first-top {
+	margin-top: 0px;
+}
+
+.nephele-teampics {
+	
+}
+
+.nephele-team-thumbnails {
+	text-align: center;
+	padding: 10px;
+	border: 1px solid transparent;
+	border-radius: 0px;
+	background-color: transparent;
+}
+
+.nephele-team-thumbnails:hover {
+	background-color: transparent;
+}
+
+.nephele-collaborators {
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+.collab-columns-separator {
+	border-top: 1px solid transparent;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.nephele-collab-thumbnails {
+	text-align: center;
+	padding: 10px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.default-separator {
+	border-top: 1px solid transparent;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.team-portraits {
+	margin-bottom: 0px;
+	border: 1px solid #eee;
+	-webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+
+.team-portraits:hover {
+	border: 5px solid #eee;
+	-webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+
+.team-names {
+	margin-bottom: 0px;
+}
+
+.team-titles {
+	font-size: 14px;
+	color: #555;
+}
+
+/* HOVER STYLES */
+
+/* Icon Forward */
+.hvr-icon-forward {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  padding-right: 2.2em;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+.hvr-icon-forward:before {
+  content: "\f105";
+  position: absolute;
+  right: 1em;
+  padding: 0 1px;
+  font-family: FontAwesome;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-icon-forward:hover:before, .hvr-icon-forward:focus:before, .hvr-icon-forward:active:before {
+  -webkit-transform: translateX(4px);
+  transform: translateX(4px);
+}
+
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+
+  .navbar-right {
+    float: right!important;
+    margin-right: -15px;
+    padding-top: 29px;
+}
+
+.nephele-home-icons {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.featurette-heading {
+    font-size: 50px;
+  }
+  
+.nephele-sidebar {
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 60px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
